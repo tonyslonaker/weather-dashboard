@@ -1,7 +1,6 @@
 function getAllMyHtml(data) {
-    // do something
   }
-  function fetchSecondCall(latlng) {
+  function fetchSecondCall(latLng) {
     fetch(`url${latLng}`)
     .then(function (response) {
       return response.json();
@@ -20,7 +19,7 @@ function getAllMyHtml(data) {
         return weatherResponse.json();
       })
       .then(function (weatherData) {
-        const latLng = weatherData.latlng;
+        const latLng = weatherData.latLng;
         fetchSecondCall(latLng);
       });
     console.log('something');

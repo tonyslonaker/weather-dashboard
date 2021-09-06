@@ -9,12 +9,11 @@ header {
     display: flex;
     justify-content: center;
     color: whitesmoke;
-    background-color: #0983e7;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
+    background-color: #180DEF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
-
 
 .city-search-forecast-container{
     display: flex;
@@ -28,7 +27,7 @@ header {
 }
 
 #city-name {
-    height:35px;
+    height:50px;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -37,11 +36,6 @@ outline: none !important;
 justify-content: center;
 }
 
-#city-name input:focus {
-    box-shadow: 0 0 10px dodgerblue !important;
-    -moz-box-shadow: 0 0 3px rgb(128, 0, 109) !important;
-    -webkit-box-shadow: 0 0 3px rgb(128, 0, 0) !important;
-}
 
 .form-input {
   flex-grow: 1;
@@ -52,9 +46,9 @@ justify-content: center;
     
 .btn {
     flex-grow: 2;
-    font-size: 1.5em;
+    font-size: 2.0em;
     text-decoration:none;
-    border: none;
+    border: 3.5px black;
     outline: none;
     background-color: dodgerblue;
     color: white;
@@ -66,15 +60,16 @@ justify-content: center;
 }
 
 .borderDiv {
-    text-align: center;
+  text-align: center;
   background-color: #B8DAFF;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 18px;  
-  border:groove rgba(1, 1, 9, 0.2);
+  border:groove black(1, 1, 9, 0.2);
 }
 
 .border-Div-right-column {
+  text-align: center; 
   background-color: #B8DAFF;
   padding-left: 3px;
   padding-right: 3px;
@@ -144,9 +139,6 @@ justify-content: center;
   h3 {
     font-size: 20px;
   }
-
-
-
 
 }
 

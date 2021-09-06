@@ -23,7 +23,7 @@ https://tonyslonaker.github.io/weather-dashboard/
 
 ### Testing the application
 
-#### Enter a city and click the magnifying glass to get your forecast results.
-### Add more cities by searching for other cities.
-### Click on any saved search to access that city again.
+#### Enter a city and click the button to get your local forecast results.
+### Add more cities by searching for other cities. Recent searches will be posted below search box.
+### Click on any previous search to access that city again.
 ### Refresh the page to validate local storage saving.

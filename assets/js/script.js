@@ -7,18 +7,12 @@ let leftColumnEL = document.querySelector("#left-column")
 let citiesListContainerBtnEl = document.querySelector(".list-group-item");
 // Daily forcast Containter
 let dailyWeatherContainerEl = document.querySelector("#forecast-output-container"); 
-// Not used, for testing if I need to in the future only.
-//let globalTestVariable = "gloabl variable";
-//let globalCallsState = 0;
-
 
 // Create a form container and containing elements
 let dynFormContainer = document.createElement("form");
 dynFormContainer.setAttribute("id", "dymCityForm");
 dynFormContainer.classList = "city-search-forecast-container";
 leftColumnEL.appendChild(dynFormContainer)
-
-
 // Create H3 element
 let formH3 = document.createElement("h3");
 formH3.textContent = " Search for a City ";
@@ -54,8 +48,6 @@ leftColumnEL.appendChild(citiesContainerEl);
 // Find the list div container
 let citiesListContainerEl = document.querySelector("#dym-cities-list");
 
-
-
 var populateSavedCities = function() {
        // Get array from local storage
        let citiesLocalStorage = JSON.parse(localStorage.getItem("savedCities"));
@@ -89,7 +81,7 @@ var populateSavedCities = function() {
        };
 };
 
-// *** Second fetch call, this will run as non asynchronous *** //
+//Second fetch call / run as non asynchronous//
 
 function fetchSecondCall(searchByCity, latNum, lonNum, unixTimeCurrentDay, currentDayIcon, currentTempImperial, currentHumidity, currentMPS, mphWindSpeed) {
 
@@ -106,11 +98,7 @@ function fetchSecondCall(searchByCity, latNum, lonNum, unixTimeCurrentDay, curre
         // *** Current Day data *** //
         // Current Day UV
         let uvIndex = secondCallData.current.uvi
-        //console.log(uvIndex)
-
-        // *** Curent date forrmat ** //
-        //console.log("today is in unix time: " + unixTimeCurrentDay);
-
+    
         let unix_timestamp = unixTimeCurrentDay;
         // Create a new JavaScript Date object based on the timestamp
         // multiplied by 1000 so that the argument is in milliseconds, not seconds.

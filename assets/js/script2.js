@@ -1,52 +1,22 @@
 var getWeatherData = function(event) {
 
-    
-
-
-
-
     event.preventDefault();
 
-
-    // get value from input elementgit 
+    // get value from input element git 
     var searchByCity = searchByCityEl.value.trim().toLowerCase();
     console.log("The selected by user is: " + searchByCity);
 
-    // If field emtpy to not fetch any data
+    // If field is emtpy dp not fetch any data
     if (searchByCity == "") {
         alert("Please do not leave city name blank");
         searchByCityEl.value = "";
         return 
     }
 
-
     // Global variable that will take then input of city and converte it to lowercase and pass it as the query to OpenWeather API.
     // Hardcoded let openWeatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + "scarborough" + "&appid=32a27c42260b02de3ba5e1466def4861";
     let openWeatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + searchByCity + "&appid=32a27c42260b02de3ba5e1466def4861&units=imperial";
     console.log(openWeatherApiUrl);
-    
-
-    /*
-
-    .attr('type', 'text') // Text input type
-    .attr('id', `input-${hourIndex}`) // Create a index of the input for track purposes
-    .attr('hour-index', hourIndex); // To be used to change clors of the input task.
-    
-    
-
-    var repoEl = document.createElement("a");
-    repoEl.classList = "list-item flex-row justify-space-between align-center";
-    repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
-    */
-
-
-    // Clear the element of input and save it to a variable that will display it on the saved cities
-    // Saved cities have will go to local storage
-    // Save it back as the it should be in as first letter capitalized.
-    //citiesSearched.push( searchByCity.charAt(0).toUpperCase() + searchByCity.slice(1) ) ;
-   // citiesSearched.push( searchByCity.charAt(0).toUpperCase() + searchByCity.slice(1) ) ;
-  // console.log("array lenght is " + citiesSearched.length)
-
 
     // Get array from local storage
     let citiesLocalStorage = JSON.parse(localStorage.getItem("savedCities"));
@@ -120,15 +90,8 @@ var getWeatherData = function(event) {
                     citiesSearched.push( searchByCity.charAt(0).toUpperCase() + searchByCity.slice(1) ) ;
                     localStorage.setItem("savedCities", JSON.stringify(citiesSearched));
                 }
+                 populateSavedCities(); // Second call after a push has been done.
 
-                // After all items have been pushed to array populate the cities in html
-
-               // citiesSearched = []; 
-
-                populateSavedCities(); // Second call after a push has been done.
-
-        
-        
             })
 
        
@@ -143,10 +106,6 @@ var getWeatherData = function(event) {
         alert("Unable to connect to OpenWeather");
         return;
       });
-
-
-
-
 };
 
 
